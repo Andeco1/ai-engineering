@@ -71,7 +71,7 @@ def report(
     5,
     help="Сколько наиболее частых значений показывать для категориальных колонок."
 ),
-
+    quality_threshold: float = typer.Option(0.6, help="Минимальный порог качества для предупреждения в консоли."),
 ) -> None:
     """
     Сгенерировать полный EDA-отчёт:
@@ -117,6 +117,15 @@ def report(
         f.write(f"- Слишком мало строк: **{quality_flags['too_few_rows']}**\n")
         f.write(f"- Слишком много колонок: **{quality_flags['too_many_columns']}**\n")
         f.write(f"- Слишком много пропусков: **{quality_flags['too_many_missing']}**\n\n")
+        if quality_flags["has_constant_columns"]:
+            cols = ", ".join(quality_flags["constant_columns"])
+            f.write(f"- **Константные колонки:** {cols} (не несут информации).\n")
+        if quality_flags["has_high_cardinality_categoricals"]:
+            cols = ", ".join(quality_flags["high_cardinality_columns"])
+            f.write(f"- **Высокая кардинальность:** {cols} (порог: {quality_flags['high_cardinality_threshold']}).\n")
+        if quality_flags["has_suspicious_id_duplicates"]:
+            cols = ", ".join(quality_flags["suspicious_id_columns"])
+            f.write(f"- **Дубликаты в ID-колонках:** {cols}.\n")
 
         f.write("## Колонки\n\n")
         f.write("См. файл `summary.csv`.\n\n")
@@ -148,9 +157,17 @@ def report(
     plot_correlation_heatmap(df, out_root / "correlation_heatmap.png")
 
     typer.echo(f"Отчёт сгенерирован в каталоге: {out_root}")
+    if quality_flags["quality_score"] < quality_threshold:
+        typer.secho(
+            f"Внимание! Низкий скор качества: {quality_flags['quality_score']:.2f}", 
+            fg=typer.colors.YELLOW, 
+            bold=True
+        )
     typer.echo(f"- Основной markdown: {md_path}")
     typer.echo("- Табличные файлы: summary.csv, missing.csv, correlation.csv, top_categories/*.csv")
     typer.echo("- Графики: hist_*.png, missing_matrix.png, correlation_heatmap.png")
+
+
 
 
 if __name__ == "__main__":
