@@ -208,12 +208,12 @@ def compute_quality_flags(summary: DatasetSummary, missing_df: pd.DataFrame) -> 
         score -= 0.2
     if summary.n_cols > 100:
         score -= 0.1
-    if flags.get("has_constant_columns"):
+    if flags["has_constant_columns"]:
+        score -= 0.005 * len(flags["constant_columns"])
+    if flags["has_high_cardinality_categoricals"]:
         score -= 0.05
-    if flags.get("has_high_cardinality_categoricals"):
-        score -= 0.05
-    if flags.get("has_suspicious_id_duplicates"):
-        score -= 0.10
+    if flags["has_suspicious_id_duplicates"]:
+        score -= 0.15
 
     score = max(0.0, min(1.0, score))
     flags["quality_score"] = score
