@@ -1,0 +1,13 @@
+{
+    "model_name": "RandomForest",
+    "metrics": {
+        "accuracy": 0.886,
+        "f1": 0.7399898631525595,
+        "roc_auc": 0.9230364499030567
+    },
+    "params": {
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "n_estimators": 100
+    }
+}

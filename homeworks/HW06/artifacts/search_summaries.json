@@ -1,0 +1,32 @@
+{
+    "LogReg": {
+        "best_params": {
+            "logreg__C": 10
+        },
+        "best_cv_score": 0.8069055460432312
+    },
+    "DecisionTree": {
+        "best_params": {
+            "ccp_alpha": 0.0,
+            "max_depth": 10,
+            "min_samples_leaf": 10
+        },
+        "best_cv_score": 0.8309256959562035
+    },
+    "RandomForest": {
+        "best_params": {
+            "max_depth": null,
+            "min_samples_leaf": 1,
+            "n_estimators": 100
+        },
+        "best_cv_score": 0.9266032123398735
+    },
+    "GradientBoosting": {
+        "best_params": {
+            "learning_rate": 0.2,
+            "max_depth": 5,
+            "n_estimators": 100
+        },
+        "best_cv_score": 0.9264892297425863
+    }
+}
