@@ -9,9 +9,9 @@
         "best_params": {
             "ccp_alpha": 0.0,
             "max_depth": 10,
-            "min_samples_leaf": 10
+            "min_samples_leaf": 20
         },
-        "best_cv_score": 0.8309256959562035
+        "best_cv_score": 0.8356890917450105
     },
     "RandomForest": {
         "best_params": {
