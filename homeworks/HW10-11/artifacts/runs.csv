@@ -1,0 +1,7 @@
+experiment_id,task,dataset,seed,model_summary,optimizer,lr,epochs_trained,best_val_accuracy,test_accuracy,precision,recall,mean_iou,notes
+C1,classification,STL10,42,simple cnn / base,Adam,0.001,5,0.4033333333333333,,,,,best_epoch=3; finetune=none; aug=False
+C2,classification,STL10,42,simple cnn / augmented,Adam,0.001,5,0.44,,,,,best_epoch=4; finetune=none; aug=True
+C3,classification,STL10,42,resnet18 / head-only,Adam,0.001,3,0.925,0.92625,,,,best_epoch=3; finetune=head_only; aug=False
+C4,classification,STL10,42,resnet18 / layer4+fc fine-tune,Adam,0.0001,3,0.9083333333333333,,,,,best_epoch=3; finetune=layer4_fc; aug=False
+V1,segmentation,OxfordIIITPet,42,DeepLabV3-ResNet50 / threshold=0.50,,,0,,,0.7753389162687503,0.9949467180098089,0.7716869690761938,foreground = cat/dog probabilities; no morphology
+V2,segmentation,OxfordIIITPet,42,DeepLabV3-ResNet50 / threshold=0.65 + clean-up,,,0,,,0.7929521434376323,0.9912617554469417,0.7864560146728763,threshold + opening + remove_small_objects

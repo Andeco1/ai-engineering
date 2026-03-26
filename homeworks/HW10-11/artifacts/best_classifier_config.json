@@ -1,0 +1,29 @@
+{
+  "experiment_id": "C3",
+  "dataset": "STL10",
+  "model_kind": "resnet18",
+  "model_summary": "resnet18 / head-only",
+  "seed": 42,
+  "use_aug": false,
+  "finetune_mode": "head_only",
+  "optimizer": "Adam",
+  "lr": 0.001,
+  "epochs": 3,
+  "batch_size": 32,
+  "train_split": "STL10 train 80% of official train split",
+  "val_split": "STL10 train 20% of official train split",
+  "test_split": "STL10 official test split",
+  "cnn_mean_std": {
+    "mean": [
+      0.4484017789363861,
+      0.44134560227394104,
+      0.4075521230697632
+    ],
+    "std": [
+      0.26044806838035583,
+      0.25732001662254333,
+      0.2721908390522003
+    ]
+  },
+  "resnet_preprocess": "torchvision ResNet18_Weights.DEFAULT transforms"
+}
