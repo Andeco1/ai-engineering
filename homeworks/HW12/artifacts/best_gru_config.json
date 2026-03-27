@@ -1,0 +1,16 @@
+{
+  "input_size": 1,
+  "hidden_size": 64,
+  "num_layers": 1,
+  "dropout": 0.0,
+  "window_size": 28,
+  "batch_size": 64,
+  "lr": 0.001,
+  "epochs": 60,
+  "patience": 10,
+  "seed": 42,
+  "scaler": "StandardScaler(target)",
+  "optimizer": "Adam",
+  "best_epoch": 16,
+  "best_val_mae": 5.346085548400879
+}
