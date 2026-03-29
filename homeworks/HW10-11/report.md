@@ -71,7 +71,8 @@
 - Кривые лучшего прогона классификации: `./artifacts/figures/classification_curves_best.png`
 - Сравнение C1-C4: `./artifacts/figures/classification_compare.png`
 - Визуализация аугментаций: `./artifacts/figures/augmentations_preview.png`
-- Визуализации второй части: `./artifacts/figures/...`
+- Визуализация примеров сегментации: `./artifacts/figures/segmentation_examples.png`
+- Визуализация метрик сегментации: `./artifacts/figures/segmentation_metrics.png`
 
 Короткая сводка (6-10 строк):
 
