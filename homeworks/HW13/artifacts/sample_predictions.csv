@@ -1,0 +1,11 @@
+text,true_label,pred_label,confidence
+The champions won the match after a tense dramatic game at the stadium.,sports,travel,0.6635698676109314
+The team flew to another city for the final and checked into a hotel near the stadium.,travel,sports,0.9256321787834167
+The coach reviewed performance dashboards after training.,technology,sports,0.7211892604827881
+We booked a flight and checked into a small hotel near the beach.,travel,travel,0.8642500638961792
+Developers deployed the model to the server after testing the code.,technology,technology,0.8693478107452393
+"The chef explained how to balance salt, pepper, and garlic.",food,food,0.9262744188308716
+"The itinerary included a museum, a harbor, and a sunset cruise.",travel,travel,0.8897469639778137
+At the airport café we ordered soup and coffee before boarding.,food,food,0.8595121502876282
+The new app update fixed a bug in the cloud data pipeline.,technology,technology,0.8910439610481262
+"A cozy café served tea, toast, and fresh pastries.",food,food,0.939079225063324
