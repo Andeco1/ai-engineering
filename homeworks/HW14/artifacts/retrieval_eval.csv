@@ -1,0 +1,16 @@
+query,expected_source,retrieved_sources,hit_at_k,recall_at_k,rank_of_first_relevant,top_k
+How many books can students borrow?,doc_02_borrowing_rules,doc_02_borrowing_rules|doc_03_returns_fines,1,1.0,1,3
+How do I renew loaned books?,doc_02_borrowing_rules,doc_02_borrowing_rules|doc_03_returns_fines,1,1.0,1,3
+What happens if an item is overdue?,doc_03_returns_fines,doc_03_returns_fines|doc_02_borrowing_rules,1,1.0,1,3
+How do I place a hold in the online catalog?,doc_04_holds_reservations,doc_04_holds_reservations|doc_15_staff_contact|doc_08_events_workshops,1,1.0,1,3
+How long can I reserve a study room?,doc_05_study_rooms,doc_14_cafe_snacks|doc_05_study_rooms,1,1.0,2,3
+Where are the printing kiosks located?,doc_06_printing_scanning,doc_06_printing_scanning|doc_09_quiet_zones,1,1.0,1,3
+Is Wi-Fi free for visitors?,doc_07_computers_wifi|doc_13_membership_visitors,doc_07_computers_wifi|doc_06_printing_scanning|doc_13_membership_visitors,1,1.0,1,3
+How do I sign up for a workshop?,doc_08_events_workshops,doc_08_events_workshops|doc_02_borrowing_rules|doc_04_holds_reservations,1,1.0,1,3
+What is not allowed in the quiet zone?,doc_09_quiet_zones,doc_09_quiet_zones|doc_05_study_rooms|doc_04_holds_reservations,1,1.0,1,3
+How are interlibrary loan PDFs delivered?,doc_10_interlibrary_loan,doc_10_interlibrary_loan,1,1.0,1,3
+What accessibility tools are available?,doc_11_accessibility,doc_11_accessibility|doc_07_computers_wifi,1,1.0,1,3
+Where are lost items kept?,doc_12_lost_found,doc_12_lost_found|doc_04_holds_reservations|doc_09_quiet_zones,1,1.0,1,3
+Can visitors enter public reading spaces?,doc_13_membership_visitors,doc_13_membership_visitors|doc_09_quiet_zones,1,1.0,1,3
+What drinks or food are allowed?,doc_14_cafe_snacks,doc_14_cafe_snacks|doc_05_study_rooms,1,1.0,1,3
+Who helps with printer problems?,doc_06_printing_scanning|doc_15_staff_contact,doc_15_staff_contact|doc_14_cafe_snacks,1,0.5,1,3

@@ -1,0 +1,5 @@
+query,before_retrieved_sources,after_retrieved_sources,changed
+Are summer opening hours different from term time?,doc_06_printing_scanning|doc_04_holds_reservations|doc_01_opening_hours,doc_16_summer_schedule|doc_04_holds_reservations|doc_06_printing_scanning,True
+Can I use the 3D printer and who approves prints?,doc_15_staff_contact|doc_12_lost_found|doc_13_membership_visitors,doc_17_3d_printing_policy|doc_15_staff_contact|doc_12_lost_found,True
+Is the library open on Sundays during exam week?,doc_01_opening_hours|doc_13_membership_visitors,doc_18_exam_week_study_hall|doc_01_opening_hours,True
+What happens to the schedule in the summer?,doc_14_cafe_snacks|doc_04_holds_reservations,doc_16_summer_schedule|doc_18_exam_week_study_hall,True
